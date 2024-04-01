@@ -21,7 +21,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="font-mons font-semibold bg-gradient-to-r from-amber-50 to-amber-100 flex justify-between items-center h-20 w-full mx-auto px-4 text-amber-900 rounded-md">
+    <div className="font-mons font-semibold bg-gradient-to-r from-rose-50 to-amber-100 flex justify-between items-center h-20 w-full mx-auto px-4 text-amber-900 rounded-md">
       {/* Logo */}
       <Logo />
 
@@ -29,12 +29,12 @@ const Navbar = () => {
       <ul className="hidden md:flex md:justify-between">
         {navItems.map((item) => (
           <Link to={item.path} key={item.id}>
-            <li className="p-2 hover:bg-[#f9e19e] rounded-md m-2 cursor-pointer duration-300 hover:text-black">
+            <li className="px-3 py-2 hover:bg-gradient-to-l from-rose-300 to-amber-200 rounded-md m-2 cursor-pointer duration-300 hover:text-black">
               {item.text}
             </li>
           </Link>
         ))}
-        <button className="p-2 bg-amber-600 text-white rounded-md my-2 md:ml-14 cursor-pointer duration-300 hover:text-black">
+        <button className="p-2 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-md my-2 md:ml-14 cursor-pointer duration-300 hover:text-black">
           <Link to="/login"></Link>
           Get Started
         </button>

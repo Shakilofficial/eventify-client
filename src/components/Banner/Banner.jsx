@@ -78,10 +78,10 @@ export default function Banner() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="bg-cover bg-center h-[750px] text-white rounded-lg"
+              className="bg-cover bg-center h-[750px] text-white rounded-md"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="bg-gradient-to-r from-[#151515] to-rgba(21, 21, 21, 0.00) 100%); rounded-lg bg-opacity-90 h-full space-y-4 flex flex-col justify-center items-start">
+              <div className="bg-gradient-to-r from-[#151515] to-rgba(21, 21, 21, 0.00) 100%); rounded-md bg-opacity-90 h-full space-y-4 flex flex-col justify-center items-start">
                 <div className="p-8 md:p-16 max-w-xl">
                   <h1 className="font-vive text-2xl md:text-5xl lg:text-6xl text-white font-bold mb-8">
                     {slide.label}

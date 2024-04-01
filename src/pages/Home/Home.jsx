@@ -1,10 +1,11 @@
 import Banner from "../../components/Banner/Banner";
+import Service from "./Service/Service";
 
 const Home = () => {
   return (
-    <div className="space-y-2">
+    <div className="">
       <Banner />
-      <h3 className="text-xl">Homepage</h3>
+      <Service />
     </div>
   );
 };

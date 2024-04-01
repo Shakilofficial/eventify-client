@@ -2,20 +2,20 @@ import Logo from "../Logo/Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-amber-50 to-amber-100 py-12">
+    <footer className="bg-gradient-to-r from-amber-50 to-rose-100 py-12">
       <div className="container mx-auto px-4 lg:px-8 xl:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-5">
           {/* Logo */}
-          <div className="col-span-1 md:col-span-3 lg:col-span-1">
-            <div className="flex items-center justify-center lg:justify-start">
+          <div className="col-span-1 md:col-span-3 lg:col-span-2">
+            <div className="flex items-center justify-center">
               <Logo className="h-8 w-auto text-amber-900" />
             </div>
-            <p className="mt-4 text-gray-700">Bringing your events to life!</p>
+            <p className="mt-4 text-xl text-center font-vive text-gray-700">Bringing your events to life!</p>
           </div>
 
           {/* Newsletter */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-semibold text-amber-900">Subscribe</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">Subscribe</h3>
             <p className="mt-2 text-gray-700">
               Stay updated with our latest events!
             </p>
@@ -33,7 +33,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-semibold text-amber-900">Company</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">Company</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-semibold text-amber-900">Contact</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">Contact</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a
