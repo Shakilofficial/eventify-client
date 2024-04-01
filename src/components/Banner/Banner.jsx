@@ -37,7 +37,7 @@ export default function Banner() {
         },
         {
           image: "https://i.ibb.co/BNkh2Bq/educational-event.jpg",
-          label: "Enlightening Educational Symposium",
+          label: "Edifying Educational Symposium",
           subtitle: "Empower minds and inspire learning with our engaging educational event solutions.",
         },
         {

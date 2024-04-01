@@ -11,15 +11,16 @@ const Service = () => {
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
-        setVisibleServices(data.slice(0, 6)); // Display only the first six services initially
+        setVisibleServices(data.slice(0, 6));
       });
   }, []);
 
   const handleViewMore = () => {
-    // Show the next six services on click of the "View More" button
-    const currentIndex = visibleServices.length;
-    const nextServices = services.slice(currentIndex, currentIndex + 6);
-    setVisibleServices((prevServices) => [...prevServices, ...nextServices]);
+    setVisibleServices(services);
+  };
+
+  const handleViewLess = () => {
+    setVisibleServices(services.slice(0, 6));
   };
 
   return (
@@ -34,12 +35,21 @@ const Service = () => {
         ))}
       </div>
       <div className="flex justify-center mt-6">
-        <button
-          onClick={handleViewMore}
-          className="bg-rose-300 font-mons text-lg hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
-        >
-          View More
-        </button>
+        {visibleServices.length < services.length ? (
+          <button
+            onClick={handleViewMore}
+            className="bg-rose-300 font-mons text-lg hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+          >
+            View More
+          </button>
+        ) : (
+          <button
+            onClick={handleViewLess}
+            className="bg-rose-300 font-mons text-lg hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+          >
+            View Less
+          </button>
+        )}
       </div>
     </section>
   );
