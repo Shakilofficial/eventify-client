@@ -8,7 +8,7 @@ import { router } from './routes/Routes'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
         <HelmetProvider>
-          <div className="max-w-[1440px] mx-auto font-roboto">
+          <div className="max-w-[1440px] mx-auto font-dance">
             <RouterProvider router={router} />
           </div>
         </HelmetProvider>

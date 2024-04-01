@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         dance: "'Dancing Script', cursive;",
         vive: "'Great Vibes', cursive;",
+        mons: "'Montserrat', sans-serif;",
       },
     },
   },

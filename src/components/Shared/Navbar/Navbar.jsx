@@ -21,7 +21,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-amber-50 to-amber-100 flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-amber-900 rounded-md">
+    <div className="font-mons font-semibold bg-gradient-to-r from-amber-50 to-amber-100 flex justify-between items-center h-20 w-full mx-auto px-4 text-amber-900 rounded-md">
       {/* Logo */}
       <Logo />
 
