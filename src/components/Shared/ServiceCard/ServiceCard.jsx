@@ -17,7 +17,7 @@ const ServiceCard = ({ service }) => {
         <p className="font-mons text-gray-600 mb-4 h-24">{description}</p>
         <div className="flex items-center justify-between">
           <span className="font-bold text-lg text-amber-600">$ {price}</span>
-          <Link to={`service/${id}`}>
+          <Link to={`${id}`}>
             <button className="bg-amber-600 font-vive hover:bg-amber-700 text-white py-2 px-4 rounded transition-colors duration-300">
               View Details
             </button>
