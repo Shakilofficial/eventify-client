@@ -38,14 +38,14 @@ const Service = () => {
         {visibleServices.length < services.length ? (
           <button
             onClick={handleViewMore}
-            className="bg-rose-300 font-mons text-lg hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+            className="bg-rose-300 font-mons  hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
           >
             View More
           </button>
         ) : (
           <button
             onClick={handleViewLess}
-            className="bg-rose-300 font-mons text-lg hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+            className="bg-rose-300 font-mons hover:bg-rose-500 hover:text-white text-rose-700 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
           >
             View Less
           </button>

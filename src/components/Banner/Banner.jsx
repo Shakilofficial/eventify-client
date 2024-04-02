@@ -9,8 +9,6 @@ import "swiper/css/pagination";
 
 import "./styles.css";
 
-// import required modules
-import { Link } from "react-router-dom";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function Banner() {

@@ -1,18 +1,14 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
-  // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
 
-  // Toggle function to handle the navbar's display
   const handleNav = () => {
     setNav(!nav);
   };
-
-  // Array containing navigation items
   const navItems = [
     { id: 1, path: "/", text: "Home" },
     { id: 2, path: "/services", text: "Services" },
@@ -21,8 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="font-mons font-semibold bg-gradient-to-r from-rose-50 to-amber-100 flex justify-between items-center h-20 w-full mx-auto px-4 text-amber-900 rounded-md">
-      {/* Logo */}
+    <div className="font-mons font-semibold bg-gradient-to-r from-rose-50 to-amber-100 flex justify-between items-center h-20 w-full mx-auto px-4 text-amber-900 rounded-md relative">
       <Logo />
 
       {/* Desktop Navigation */}
@@ -49,7 +44,7 @@ const Navbar = () => {
       <ul
         className={
           nav
-            ? "fixed md:hidden text-white left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
+            ? "fixed md:hidden text-white left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 z-50"
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >
