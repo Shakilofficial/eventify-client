@@ -9,9 +9,8 @@ const ContactUs = () => {
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                className aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                scelerisque sagittis ante, ac tincidunt sem venenatis ut.
+                We take pride in our international reputation for delivering
+                exceptional events with discretion and world-class service.
               </p>
               <ul className="mx-auto mb-6 md:mb-0">
                 <li className="flex">
