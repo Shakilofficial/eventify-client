@@ -18,13 +18,20 @@
     "rating": 3.8,
     "comment": "Decent service, but could be improved.",
     "date": "2024-03-25",
-    "photoURL": "https://i.ibb.co/C2YjzHH/avatar-2.jpg"
+    "photoURL": "https://i.ibb.co/GM3LX8t/team2.jpg"
   },
   {
     "userName": "Bob Brown",
     "rating": 4,
     "comment": "Good overall experience.",
     "date": "2024-03-28",
-    "photoURL": "https://i.ibb.co/ZWy9J38/avatar-1.jpg"
+    "photoURL": "https://i.ibb.co/W5gQ4DJ/avatar-5.jpg"
+  },
+  {
+    "userName": "Jhon Alex",
+    "rating": 4,
+    "comment": "Overall Excellent experience.",
+    "date": "2024-03-28",
+    "photoURL": "https://i.ibb.co/s2qfJRy/avatar-10.jpg"
   }
 ]

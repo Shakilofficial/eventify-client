@@ -3,6 +3,8 @@ import Login from "../components/Login/Login";
 import Error from "../components/Shared/Error/Error";
 import SignUp from "../components/SignUp/SignUp";
 import Root from "../layout/Root";
+import Blog from "../pages/Blog/Blog";
+import BlogDetail from "../pages/Blog/BlogDetail";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import Home from "../pages/Home/Home";
 import ServiceDetail from "../pages/Services/ServiceDetail";
@@ -21,6 +23,16 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactUs />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "blog/:id",
+        element: <BlogDetail />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:8000/blog/${params.id}`),
       },
       {
         path: "services",

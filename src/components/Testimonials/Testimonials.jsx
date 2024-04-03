@@ -10,7 +10,7 @@ const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:8000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -29,7 +29,7 @@ const Testimonials = () => {
           className="mySwiper space-x-4 overflow-hidden rounded-lg shadow-md"
         >
           {reviews.map((review) => (
-            <SwiperSlide key={review.id}>
+            <SwiperSlide key={review._id}>
               <div className="flex flex-col h-[400px] items-center justify-center space-y-4">
                 <div className="rounded-full overflow-hidden w-20 h-20 border-4 border-amber-500 flex items-center justify-center">
                   <img
