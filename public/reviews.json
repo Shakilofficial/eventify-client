@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "userName": "John Doe",
     "rating": 4.5,
     "comment": "Great service! Will definitely come back.",
@@ -8,7 +7,6 @@
     "photoURL": "https://i.ibb.co/C2YjzHH/avatar-2.jpg"
   },
   {
-    "id": 2,
     "userName": "Jane Smith",
     "rating": 5,
     "comment": "Excellent experience. Highly recommended!",
@@ -16,7 +14,6 @@
     "photoURL": "https://i.ibb.co/ZWy9J38/avatar-1.jpg"
   },
   {
-    "id": 3,
     "userName": "Alice Johnson",
     "rating": 3.8,
     "comment": "Decent service, but could be improved.",
@@ -24,7 +21,6 @@
     "photoURL": "https://i.ibb.co/C2YjzHH/avatar-2.jpg"
   },
   {
-    "id": 4,
     "userName": "Bob Brown",
     "rating": 4,
     "comment": "Good overall experience.",

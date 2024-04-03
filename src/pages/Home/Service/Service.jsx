@@ -7,7 +7,7 @@ const Service = () => {
   const [visibleServices, setVisibleServices] = useState([]);
 
   useEffect(() => {
-    fetch("/public/events.json")
+    fetch("http://localhost:8000/services")
       .then((res) => res.json())
       .then((data) => {
         setServices(data);

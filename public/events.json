@@ -1,82 +1,152 @@
 [
   {
-    "id": 1,
     "image": "https://i.ibb.co/NNGys1v/conference-organisers.jpg",
     "title": "Corporate Conference Excellence",
     "subtitle": "Elevate your corporate gatherings with our professional event management services.",
     "description": "Our comprehensive corporate event planning service includes venue selection, catering arrangements, audiovisual setup, and professional event coordination.",
-    "price": "5000"
+    "price": "5000",
+    "gallery": [
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg"
+    ]
   },
   {
-    "id": 2,
     "image": "https://i.ibb.co/R0V0mzb/1565175301.jpg",
     "title": "Dream Wedding Bliss",
     "subtitle": "Turn your dream wedding into reality with our personalized wedding planning services.",
     "description": "Let us take care of every detail for your special day. Our wedding coordination package covers everything from vendor management to timeline creation and on-site coordination.",
-    "price": "3500"
+    "price": "3500",
+    "gallery": [
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg"
+    ]
   },
   {
-    "id": 3,
     "image": "https://i.ibb.co/TmLnsd0/15647372979249-01.jpg",
     "title": "Destination Celebration Extravaganza",
     "subtitle": "Create unforgettable memories with our expertly crafted destination event experiences.",
     "description": "Planning a destination wedding? Our experienced team will handle all the logistics, travel arrangements, and local coordination to ensure your dream wedding comes to life.",
-    "price": "7500"
+    "price": "7500",
+    "gallery": [
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg"
+    ]
   },
   {
-    "id": 4,
     "image": "https://i.ibb.co/ryKsCDH/Reunion-Festival.jpg",
     "title": "Heartwarming Reunion Moments",
     "subtitle": "Reconnect with loved ones and relive cherished memories at your reunion event.",
     "description": "Bring your family together for a memorable reunion without the stress. Our family reunion organization service includes venue booking, activity planning, and accommodation coordination.",
-    "price": "2000"
+    "price": "2000",
+    "gallery": [
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg"
+    ]
   },
   {
-    "id": 5,
     "image": "https://i.ibb.co/BNkh2Bq/educational-event.jpg",
     "title": "Enlightening Educational Symposium",
     "subtitle": "Empower minds and inspire learning with our engaging educational event solutions.",
     "description": "Host successful educational workshops with our coordination service. We handle venue setup, registration management, speaker coordination, and logistical support.",
-    "price": "1500"
+    "price": "1500",
+    "gallery": [
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg"
+    ]
   },
   {
-    "id": 6,
     "image": "https://i.ibb.co/xJ4Jsg8/15647372361801-01.jpg",
     "title": "Epic Party Adventures",
     "subtitle": "Transform ordinary gatherings into extraordinary parties with our event planning expertise.",
     "description": "Celebrate birthdays in style with our coordination service. We handle venue decoration, entertainment, catering, and party favors to make it a memorable occasion.",
-    "price": "1800"
+    "price": "1800",
+    "gallery": [
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg"
+    ]
   },
   {
-    "id": 7,
     "image": "https://i.ibb.co/D5jhmhP/15647372361866-01.jpg",
     "title": "Unforgettable Music Festival Experience",
     "subtitle": "Immerse yourself in the magic of music and create unforgettable memories at our music festival.",
     "description": "Plan and execute a successful music festival with our management service. We handle everything from artist booking to sponsorships, logistics, and crowd management.",
-    "price": "10000"
+    "price": "10000",
+    "gallery": [
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg"
+    ]
   },
   {
-    "id": 8,
     "image": "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
     "title": "Joyous Birthday Celebrations",
     "subtitle": "Make every birthday memorable with our expert party planning services.",
     "description": "From themed decorations to fun activities and delicious cakes, we ensure your birthday party is a hit with guests of all ages.",
-    "price": "1200"
+    "price": "1200",
+    "gallery": [
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg"
+    ]
   },
   {
-    "id": 9,
     "image": "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
     "title": "Anniversary Delight Packages",
     "subtitle": "Celebrate years of love and togetherness with our romantic anniversary celebration packages.",
     "description": "Surprise your partner with a memorable anniversary celebration. Our packages include romantic dinners, custom gifts, and personalized experiences.",
-    "price": "1500"
+    "price": "1500",
+    "gallery": [
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg"
+    ]
   },
   {
-    "id": 10,
     "image": "https://i.ibb.co/Qfqxc50/reunio-fes.jpg",
     "title": "Picnic Party Fun",
     "subtitle": "Enjoy the great outdoors with our hassle-free picnic party planning services.",
     "description": "Plan a fun-filled picnic with family and friends without the stress of organizing. We handle everything from location setup to delicious food and games.",
-    "price": "800"
+    "price": "800",
+    "gallery": [
+      "https://i.ibb.co/FmwXmCg/cover.jpg",
+      "https://i.ibb.co/1mpYcDv/15647372979224-01.jpg",
+      "https://i.ibb.co/mtVjm1p/15647369476391-01.jpg",
+      "https://i.ibb.co/rMzQ6RT/15647371421474-01.jpg",
+      "https://i.ibb.co/QFjS49X/15647369476465-01.jpg",
+      "https://i.ibb.co/R0V0mzb/1565175301.jpg"
+    ]
   }
 ]
