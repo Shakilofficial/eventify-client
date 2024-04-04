@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
 const Footer = () => {
@@ -10,12 +11,16 @@ const Footer = () => {
             <div className="flex items-center justify-center">
               <Logo className="h-8 w-auto text-amber-900" />
             </div>
-            <p className="mt-4 text-xl text-center font-vive text-gray-700">Bringing your events to life!</p>
+            <p className="mt-4 text-xl text-center font-vive text-gray-700">
+              Bringing your events to life!
+            </p>
           </div>
 
           {/* Newsletter */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-vive font-semibold text-amber-900">Subscribe</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">
+              Subscribe
+            </h3>
             <p className="mt-2 text-gray-700">
               Stay updated with our latest events!
             </p>
@@ -25,15 +30,20 @@ const Footer = () => {
                 placeholder="Your email"
                 className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-amber-500"
               />
-              <button className="mt-2 w-full bg-amber-500 text-white py-2 rounded-md hover:bg-amber-600 transition duration-300 focus:outline-none focus:bg-amber-600">
-                Sign Up
-              </button>
+              <Link to="/signup">
+                {" "}
+                <button className="mt-2 w-full bg-amber-500 text-white py-2 rounded-md hover:bg-amber-600 transition duration-300 focus:outline-none focus:bg-amber-600">
+                  Sign Up
+                </button>
+              </Link>
             </form>
           </div>
 
           {/* Company Links */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-vive font-semibold text-amber-900">Company</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">
+              Company
+            </h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a
@@ -64,7 +74,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-vive font-semibold text-amber-900">Contact</h3>
+            <h3 className="text-xl font-vive font-semibold text-amber-900">
+              Contact
+            </h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a

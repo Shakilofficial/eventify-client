@@ -1,7 +1,48 @@
+import { useState } from "react";
+
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
+import axiosSecure from "../../api";
 import Heading from "../../components/Heading/Heading";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    textarea: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+
+    try {
+      await axiosSecure.post("/contact", formData);
+      setFormData({
+        name: "",
+        email: "",
+        textarea: "",
+      });
+      setSubmitting(false);
+      toast.success("Your message has been sent successfully!");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error(
+        "An error occurred while sending your message. Please try again later."
+      );
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section className="mb-10" id="contact">
       <Helmet>
@@ -9,7 +50,7 @@ const ContactUs = () => {
       </Helmet>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <Heading title="Contact Us" subtitle="Get in Touch with Our Team" />
-        <div className="flex items-stretch justify-center">
+        <div className="flex items-stretch justify-center font-mons">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
@@ -114,43 +155,57 @@ const ContactUs = () => {
               <h2 className="mb-4 text-2xl font-bold dark:text-amber-700">
                 Ready to Get Started?
               </h2>
-              <form id="contactForm">
+              {/* Contact Form */}
+              <form onSubmit={handleSubmit} id="contactForm">
                 <div className="mb-6 font-mons">
+                  {/* Name Field */}
                   <div className="mx-0 mb-1 sm:mb-4">
-                    <div className="mx-0 mb-1 sm:mb-4">
-                      <label
-                        htmlFor="name"
-                        className="pb-1 text-xs uppercase tracking-wider"
-                      ></label>
-                      <input
-                        type="text"
-                        id="name"
-                        autoComplete="given-name"
-                        placeholder="Your name"
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                        name="name"
-                      />
-                    </div>
-                    <div className="mx-0 mb-1 sm:mb-4">
-                      <label
-                        htmlFor="email"
-                        className="pb-1 text-xs uppercase tracking-wider"
-                      ></label>
-                      <input
-                        type="email"
-                        id="email"
-                        autoComplete="email"
-                        placeholder="Your email address"
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                        name="email"
-                      />
-                    </div>
+                    <label
+                      htmlFor="name"
+                      className="pb-1 text-xs uppercase tracking-wider"
+                    >
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      autoComplete="given-name"
+                      placeholder="Your name"
+                      className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
                   </div>
+                  {/* Email Field */}
+                  <div className="mx-0 mb-1 sm:mb-4">
+                    <label
+                      htmlFor="email"
+                      className="pb-1 text-xs uppercase tracking-wider"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      autoComplete="email"
+                      placeholder="Your email address"
+                      className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {/* Message Field */}
                   <div className="mx-0 mb-1 sm:mb-4">
                     <label
                       htmlFor="textarea"
                       className="pb-1 text-xs uppercase tracking-wider"
-                    ></label>
+                    >
+                      Your Message
+                    </label>
                     <textarea
                       id="textarea"
                       name="textarea"
@@ -158,15 +213,20 @@ const ContactUs = () => {
                       rows="5"
                       placeholder="Write your message..."
                       className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      required
+                      value={formData.textarea}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                 </div>
+                {/* Submit Button */}
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="w-full bg-amber-600 text-lg text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                    className="w-full bg-amber-600 hover:bg-amber-800 font-semibold text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                    disabled={submitting}
                   >
-                    Send Message
+                    {submitting ? "Sending..." : "Send Message"}
                   </button>
                 </div>
               </form>
