@@ -3,7 +3,7 @@ import axiosSecure from ".";
 //save user data in database
 export const saveUser = async (user) => {
   const currentUser = {
-    userName: user.displayName,
+    displayName: user.displayName,
     email: user.email,
     photoURL: user.photoURL,
   };

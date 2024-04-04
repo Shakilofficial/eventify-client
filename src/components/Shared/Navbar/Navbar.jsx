@@ -25,15 +25,28 @@ const Navbar = () => {
 
   const NavButton = () => {
     return (
-      <div className="flex items-center">
+      <div className="flex items-center dropdown dropdown-bottom dropdown-end">
         {user && user.photoURL && (
           <img
+            tabIndex={0}
+            role="button"
             className="rounded-full object-cover h-8 w-8 ml-4"
             referrerPolicy="no-referrer"
             src={user.photoURL}
             alt="profile"
           />
         )}
+        <ul
+          tabIndex={0}
+          className="dropdown-content z-[10] menu p-2 shadow bg-gradient-to-r from-rose-50 text-amber-800 to-amber-100 rounded-box w-52"
+        >
+          <li>
+            <Link>Home</Link>
+          </li>
+          <li>
+            <Link>Dashboard</Link>
+          </li>
+        </ul>
         {user ? (
           <button
             className="p-2 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-md my-2 ml-5 md:ml-14 cursor-pointer duration-300 hover:text-black"
