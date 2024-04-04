@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Heading from "../../components/Heading/Heading";
 import ServiceCard from "../../components/Shared/ServiceCard/ServiceCard";
 
@@ -29,6 +30,9 @@ const Services = () => {
 
   return (
     <div className="my-16">
+      <Helmet>
+        <title>EventiFy | Services</title>
+      </Helmet>
       <Heading
         title="Our Services"
         subtitle="Explore Our Range of Premium Services"
@@ -43,7 +47,7 @@ const Services = () => {
         />
         <button
           onClick={handleSearch}
-          className="bg-rose-800 text-white px-4 rounded-r-md hover:bg-rose-700 focus:outline-none"
+          className="bg-rose-800 font-semibold text-white px-4 rounded-r-md hover:bg-rose-700 focus:outline-none"
         >
           Search
         </button>

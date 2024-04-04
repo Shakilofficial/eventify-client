@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getToken, saveUser } from "../../api/auth";
@@ -53,6 +54,9 @@ const Login = () => {
 
   return (
     <section className="bg-gray-50 min-h-screen flex box-border justify-center items-center">
+      <Helmet>
+        <title>EventiFy | Login</title>
+      </Helmet>
       <div className="bg-gradient-to-r from-rose-100 to-amber-100 rounded-2xl flex max-w-5xl p-5 items-center">
         <div className="md:w-1/2 text-center font-mons p-8">
           <h2 className="font-bold font-vive text-4xl lg:text-5xl text-amber-600">

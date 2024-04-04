@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
@@ -12,6 +13,9 @@ const Blog = () => {
 
   return (
     <div className="w-full mx-auto grid grid-cols-1 gap-5 my-8 px-4">
+      <Helmet>
+        <title>EventiFy | Blogs</title>
+      </Helmet>
       {blogs.map((blog) => (
         <div
           key={blog._id}
@@ -34,7 +38,12 @@ const Blog = () => {
               <p className="font-mons">
                 {blog.description.substring(0, 400)}...
                 <span className="ml-2">
-                  <Link className="hover:text-rose-500 text-amber-600 font-semibold" to={`${blog._id}`}>Read More</Link>
+                  <Link
+                    className="hover:text-rose-500 text-amber-600 font-semibold"
+                    to={`${blog._id}`}
+                  >
+                    Read More
+                  </Link>
                 </span>
               </p>
             </div>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { useLoaderData } from "react-router-dom";
 
@@ -7,6 +8,9 @@ const ServiceDetail = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>EventiFy | Service: {title} </title>
+      </Helmet>
       <div className="max-w-screen-lg mx-auto p-5 sm:p-10 md:p-16">
         <div className="mb-10 rounded overflow-hidden flex flex-col mx-auto text-center">
           <h1 className="pt-1 font-vive md:text-4xl text-xl font-semibold  text-amber-600 hover:text-rose-600 transition duration-500 ease-in-out mb-2">

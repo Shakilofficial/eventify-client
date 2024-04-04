@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import Heading from "../../components/Heading/Heading";
 
 const ContactUs = () => {
   return (
     <section className="mb-10" id="contact">
+      <Helmet>
+        <title>EventiFy | Contact Us</title>
+      </Helmet>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <Heading title="Contact Us" subtitle="Get in Touch with Our Team" />
         <div className="flex items-stretch justify-center">
