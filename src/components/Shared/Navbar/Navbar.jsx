@@ -1,14 +1,58 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { user, logOut } = useAuth();
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Log Out Successfully");
+      })
+      .catch((err) => {
+        toast.error(err?.message);
+      });
+  };
+
+  const NavButton = () => {
+    return (
+      <div className="flex items-center">
+        {user && user.photoURL && (
+          <img
+            className="rounded-full object-cover h-8 w-8 ml-4"
+            referrerPolicy="no-referrer"
+            src={user.photoURL}
+            alt="profile"
+          />
+        )}
+        {user ? (
+          <button
+            className="p-2 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-md my-2 ml-5 md:ml-14 cursor-pointer duration-300 hover:text-black"
+            onClick={handleLogOut}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            className="p-2 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-md my-2 ml-5 md:ml-14 cursor-pointer duration-300 hover:text-black"
+            to="/login"
+          >
+            Get Started
+          </Link>
+        )}
+      </div>
+    );
+  };
+
   const navItems = [
     { id: 1, path: "/", text: "Home" },
     { id: 2, path: "/services", text: "Services" },
@@ -29,10 +73,7 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-        <button className="p-2 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-md my-2 md:ml-14 cursor-pointer duration-300 hover:text-black">
-          <Link to="/login"></Link>
-          Get Started
-        </button>
+        <NavButton />
       </ul>
 
       {/* Mobile Navigation Icon */}
@@ -59,10 +100,7 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-        <button className="p-2 bg-amber-600 rounded-md ml-4 cursor-pointer duration-300 hover:text-black">
-          <Link to="/login"></Link>
-          Get Started
-        </button>
+        <NavButton />
       </ul>
     </div>
   );

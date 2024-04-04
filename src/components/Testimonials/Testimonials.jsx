@@ -16,7 +16,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-8">
+    <section className="max-w-5xl mx-auto px-4 py-8">
       <Heading
         title="User Reviews"
         subtitle="Discover What Our Clients Have to Say"
