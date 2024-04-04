@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Heading from "../../../components/Heading/Heading";
 
 const items = [
@@ -36,12 +37,16 @@ const Stats = () => {
       />
       <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
         {items.map((stat, index) => (
-          <div key={index} className="flex flex-col justify-start m-2 lg:m-6">
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.2 }}
+            className="flex flex-col justify-start m-2 lg:m-6"
+          >
             <p className="text-4xl font-mons text-rose-600 font-bold leading-none lg:text-6xl">
               {stat.value}
             </p>
             <p className="text-sm font-vive sm:text-base">{stat.label}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

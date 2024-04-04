@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Heading from "../../../components/Heading/Heading";
 import ServiceCard from "../../../components/Shared/ServiceCard/ServiceCard";
@@ -34,7 +35,10 @@ const Service = () => {
           <ServiceCard key={service._id} service={service} />
         ))}
       </div>
-      <div className="flex justify-center mt-6">
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        className="flex justify-center mt-6"
+      >
         {visibleServices.length < services.length ? (
           <button
             onClick={handleViewMore}
@@ -50,7 +54,7 @@ const Service = () => {
             View Less
           </button>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };
