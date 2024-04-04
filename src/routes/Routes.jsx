@@ -9,6 +9,7 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import Home from "../pages/Home/Home";
 import ServiceDetail from "../pages/Services/ServiceDetail";
 import Services from "../pages/Services/Services";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "blog/:id",
-        element: <BlogDetail />,
+        element: (
+          <PrivateRoute>
+            <BlogDetail />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:8000/blog/${params.id}`),
       },
@@ -40,7 +45,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "services/:id",
-        element: <ServiceDetail />,
+        element: (
+          <PrivateRoute>
+            <ServiceDetail />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:8000/services/${params.id}`),
       },

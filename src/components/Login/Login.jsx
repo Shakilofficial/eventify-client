@@ -1,6 +1,56 @@
-import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { getToken, saveUser } from "../../api/auth";
 import loginImg from "../../assets/login.svg";
+import useAuth from "../../hooks/useAuth";
+
 const Login = () => {
+  const { signIn, signInWithGoogle } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
+
+  // form submit handler
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    try {
+      //2. User Login
+      const result = await signIn(email, password);
+      //5. get token
+      await getToken(result?.user?.email);
+
+      navigate(from, { replace: true });
+      toast.success("Login Successful");
+    } catch (err) {
+      console.log(err);
+      toast.error(err?.message);
+    }
+  };
+
+  // Handle Google Signin
+  const handleGoogleSignIn = async () => {
+    try {
+      //2. User Registration using google
+      const result = await signInWithGoogle();
+
+      //4. save user data in database
+      const dbResponse = await saveUser(result?.user);
+      console.log(dbResponse);
+
+      //5. get token
+      await getToken(result?.user?.email);
+      navigate(from, { replace: true });
+      toast.success("Login Successful");
+    } catch (err) {
+      console.log(err);
+      toast.error(err?.message);
+    }
+  };
+
   return (
     <section className="bg-gray-50 min-h-screen flex box-border justify-center items-center">
       <div className="bg-gradient-to-r from-rose-100 to-amber-100 rounded-2xl flex max-w-5xl p-5 items-center">
@@ -12,7 +62,11 @@ const Login = () => {
             If you already a member, Please Login.
           </p>
 
-          <form action="" className="flex flex-col gap-4">
+          <form
+            onSubmit={handleSubmit}
+            action=""
+            className="flex flex-col gap-4"
+          >
             <input
               className="p-2 mt-8 rounded-xl text-sm border"
               type="email"
@@ -42,7 +96,10 @@ const Login = () => {
             <p className="text-center text-sm">OR</p>
             <hr className="border-gray-300" />
           </div>
-          <button className="bg-gradient-to-r from-rose-300 to-amber-200  text-black border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-rose-400 font-medium">
+          <button
+            onClick={handleGoogleSignIn}
+            className="bg-gradient-to-r from-rose-300 to-amber-200  text-black border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-rose-400 font-medium"
+          >
             <svg
               className="mr-3"
               xmlns="http://www.w3.org/2000/svg"
